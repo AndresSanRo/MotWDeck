@@ -6,10 +6,13 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using MotWDeckAPI.Data;
+using MotWDeckAPI.Repositories;
 
 namespace MotWDeckAPI
 {
@@ -25,6 +28,9 @@ namespace MotWDeckAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<IRepositoryMotWDeck, RepositoryMotWDeck>();
+            //services.AddDbContext<IContextMotWDeck, ContextMotWDeck>(options => options.UseMySql(Configuration.GetConnectionString("LocalMotWDeckConnection")));
+            services.AddDbContext<IContextMotWDeck, ContextMotWDeck>(options => options.UseMySql(Configuration.GetConnectionString("RemoteMySqlMotWDeck")));            
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
