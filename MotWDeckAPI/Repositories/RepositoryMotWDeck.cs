@@ -22,5 +22,13 @@ namespace MotWDeckAPI.Repositories
         {
             return Context.Playbooks.SingleOrDefault(playbook => playbook.ID.Equals(id));
         }
+        public List<Improvement> GetImprovements()
+        {
+            return Context.Improvements.ToList();
+        }
+        public Improvement GetImprovement(int id)
+        {
+            return Context.Improvements.SingleOrDefault(improvement => improvement.ID.Equals(id));
+        }
     }
 }

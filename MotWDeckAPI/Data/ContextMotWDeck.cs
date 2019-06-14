@@ -11,5 +11,6 @@ namespace MotWDeckAPI.Data
     {
         public ContextMotWDeck(DbContextOptions options) : base(options) { }
         public DbSet<Playbook> Playbooks { get; set; }
+        public DbSet<Improvement> Improvements { get; set; }
     }
 }

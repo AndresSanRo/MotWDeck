@@ -10,5 +10,7 @@ namespace MotWDeckAPI.Repositories
     {
         List<Playbook> GetPlaybooks();
         Playbook GetPlaybook(int id);
+        List<Improvement> GetImprovements();
+        Improvement GetImprovement(int id);
     }
 }
