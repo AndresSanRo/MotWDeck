@@ -12,6 +12,7 @@ namespace MotWDeckAPI.Data
         DbSet<Playbook> Playbooks { get; set; }
         DbSet<Improvement> Improvements { get; set; }
         DbSet<GearItem> Gear { get; set; }
+        DbSet<Move> Moves { get; set; }
         int SaveChanges();
     }
 }

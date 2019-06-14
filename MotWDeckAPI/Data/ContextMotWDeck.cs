@@ -13,5 +13,6 @@ namespace MotWDeckAPI.Data
         public DbSet<Playbook> Playbooks { get; set; }
         public DbSet<Improvement> Improvements { get; set; }
         public DbSet<GearItem> Gear { get; set; }
+        public DbSet<Move> Moves { get; set; }
     }
 }
