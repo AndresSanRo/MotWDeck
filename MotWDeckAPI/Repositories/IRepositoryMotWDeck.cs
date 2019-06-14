@@ -12,5 +12,9 @@ namespace MotWDeckAPI.Repositories
         Playbook GetPlaybook(int id);
         List<Improvement> GetImprovements();
         Improvement GetImprovement(int id);
+        List<GearItem> GetGear();
+        GearItem GetGearItem(int id);
+        void InsertGearItem(String name, String tags);
+        void DeleteGearitem(int id);
     }
 }
