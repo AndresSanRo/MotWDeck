@@ -16,5 +16,8 @@ namespace MotWDeckAPI.Repositories
         GearItem GetGearItem(int id);
         void InsertGearItem(String name, String tags);
         void DeleteGearitem(int id);
+        List<Move> GetMoves();
+        Move GetMove(int id);
+        List<Move> GetMovesByPlaybook(int playbookId);
     }
 }
