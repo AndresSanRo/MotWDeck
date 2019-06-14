@@ -10,6 +10,7 @@ namespace MotWDeckAPI.Data
     public interface IContextMotWDeck
     {
         DbSet<Playbook> Playbooks { get; set; }
+        DbSet<Improvement> Improvements { get; set; }
         int SaveChanges();
     }
 }
